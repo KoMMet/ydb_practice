@@ -13,7 +13,7 @@ clean:
 	cd exec;make clean;
 
 exec:exec/obj/bfpmain.o
-	gcc $(OBJS) $(INCS) -L../lib -lUdv -lDaf $(YDB) -o bin/Bfpmainproc
+	gcc $(OBJS) $(INCS) -Wall -g -L../lib -lUdv -lDaf $(YDB) -o bin/Bfpmainproc
 
 execclean:
 	rm -fr bin/*
