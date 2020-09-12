@@ -20,7 +20,7 @@ SystemBlock(SB):大分類
 FunctionModule(FM):中分類  
 ProcessingUnit(PU):小分類  
 
-![image](https://user-images.githubusercontent.com/29003588/93002044-c34c8100-f56e-11ea-8331-81d05efa8f19.png)  
+ ![image](https://user-images.githubusercontent.com/29003588/93002044-c34c8100-f56e-11ea-8331-81d05efa8f19.png)  
 
 ## ファイル名・関数名規則  
 Lから始まるもの  
