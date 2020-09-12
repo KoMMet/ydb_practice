@@ -7,5 +7,5 @@ clean:
 lib:
 	ar rcs ../lib/libUdv.a man/obj/*
 
-execclean:
-	rm -fr bin/*
+libclean:
+	rm -fr ../lib/libUdb.a
