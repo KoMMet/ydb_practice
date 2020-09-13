@@ -4,8 +4,22 @@
 #include "Daf.h"
 #include "bfp.h"
 
-int32_t main(void)
+static void print_info(void);
+
+int32_t main(int argc, char** argv)
 {
+    int initarg;
+    char* optstr = "vu";
+
+    while((initarg = getopt(argc, argv, optstr)) != -1)
+    {
+        if(initarg == 'v')
+        {
+            print_info();
+            return 0;
+        }
+    }
+
     Bfpalmdrive();
     Bfpcommod();
 
@@ -38,3 +52,10 @@ int32_t main(void)
 
     return 0;
 }
+
+static void print_info(void)
+{
+    puts("system infomation...");
+    puts("etc...");
+}
+
