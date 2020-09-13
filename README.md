@@ -44,7 +44,7 @@ ubuntu@ubuntu:~/workspace/c/tmp/Bfp$
 
 ### 階層による分類
 
-SystemBlock(SB):大分類  
+BlockFucntins(BF):大分類  
 FunctionModule(FM):中分類  
 ProcessingUnit(PU):小分類  
 
@@ -52,7 +52,7 @@ ProcessingUnit(PU):小分類
 
 ## ファイル名・関数名規則  
 Lから始まるもの  
-　　SB間ヘッダーに入る関数  
+　　BF間ヘッダーに入る関数  
 大文字から始まるもの  
 　　FM間ヘッダーに入る関数  
 小文字から始まるもの  
