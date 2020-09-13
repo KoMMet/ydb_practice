@@ -11,6 +11,20 @@ https://docs.yottadb.com/MultiLangProgGuide/cprogram.html
 
 とんでもなくマイナーだけど、可能性を感じる。DBの性能で悩まされる前に色々触っておこう。  
 
+## 環境
+
+```
+ubuntu@ubuntu:~/workspace/c/tmp$ uname -a
+Linux ubuntu 4.15.0-1068-raspi2 #72-Ubuntu SMP PREEMPT Fri Aug 14 05:09:54 UTC 2020 aarch64 aarch64 aarch64 GNU/Linux
+ubuntu@ubuntu:~/workspace/c/tmp$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 18.04.5 LTS
+Release:        18.04
+Codename:       bionic
+ubuntu@ubuntu:~/workspace/c/tmp$
+```
+
 ## 実行例
 
 ```
