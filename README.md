@@ -11,6 +11,20 @@ https://docs.yottadb.com/MultiLangProgGuide/cprogram.html
 
 とんでもなくマイナーだけど、可能性を感じる。DBの性能で悩まされる前に色々触っておこう。  
 
+## 実行例
+
+```
+ubuntu@ubuntu:~/workspace/c/tmp/Bfp$ bin/Bfpmainproc
+Bfpalmdrive
+Bfpcommod
+Udvmanprint
+software versoin etc...
+worldydbhello
+ubuntu@ubuntu:~/workspace/c/tmp/Bfp$ bin/Bfpmainproc -v
+system infomation...
+etc...
+ubuntu@ubuntu:~/workspace/c/tmp/Bfp$
+```
 
 ## コード設計
 
