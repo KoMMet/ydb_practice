@@ -7,7 +7,7 @@ SRCFILES=$(shell find src -name *.c -printf "%f\n")
 OBJS=$(addprefix obj/, $(patsubst %.c, %.o, $(SRCFILES)))
 
 CC=gcc
-CFLAGS= -std=c11 -Wall -g -lm -lpthread -I$(H1) -I$(H2) -I$(H3)
+CFLAGS= -std=c11 -Wall -g -lm -pthread -I$(H1) -I$(H2) -I$(H3)
 
 collect:$(OBJS)
 
