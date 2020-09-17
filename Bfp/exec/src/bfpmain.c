@@ -1,6 +1,7 @@
 #include "COMMON.h"
 #include "Bfp.h"
 #include "Udv.h"
+#include "Utl.h"
 #include "Daf.h"
 #include "bfp.h"
 
@@ -49,6 +50,20 @@ int32_t main(int argc, char** argv)
     LDafacsget(&set, &get);
 
     puts(getstr);
+
+
+    //-------------Utl test-----------------
+    uint32_t a = 10; // 1010
+    uint32_t res;
+    res = LUtlbit32getLSB(a);
+    LUtilbitprint(res);
+
+    res = LUtlbit32popcount(a);
+    printf("%d\n", res);
+
+    uint32_t b = 5; // 0101
+    LUtlbit32swap(&a, &b);
+    printf("a=%d b=%d\n", a, b );
 
     return 0;
 }
