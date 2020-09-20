@@ -9,15 +9,40 @@ static void print_info(void);
 
 int32_t main(int argc, char** argv)
 {
-    int initarg;
-    char* optstr = "vu";
+    int32_t initarg;
+    char* optstr = "hk:v:";
+    char keyname[DAFACS_STRLENGTH];
+    char setval[DAFACS_STRLENGTH];
+
+    strcpy(keyname, "initkey");
+    strcpy(setval, "initvalue");
+
+    if(argc == 1)
+    {
+        puts("invalid argment");
+        print_info();
+        return 0;
+    }
 
     while((initarg = getopt(argc, argv, optstr)) != -1)
     {
-        if(initarg == 'v')
+        if(initarg == 'h')
         {
             print_info();
             return 0;
+        }
+
+        switch(initarg)
+        {
+            case 'k':
+                strcpy(keyname, optarg);
+                break;
+            case 'v':
+                strcpy(setval, optarg);
+                break;
+            default:
+                puts("invalid argment");
+                break;
         }
     }
 
@@ -29,48 +54,26 @@ int32_t main(int argc, char** argv)
 
     //-----------db access set---------------
     dafacsset_s set;
-    char keyname[50];
-    char setval[50];
 
-    strcpy(keyname, "helloydbname");
-    strcpy(setval, "worldydbhello");
-
-    set.midkeysnum = 0;
-    set.keyname = keyname;
-    set.setvalue = setval;
+    Bfpcomcreatedafacsset_one(&set, keyname, setval);
 
     LDafacsset(&set);
 
     //-----------db access get---------------
     dafacsget_s get;
-    char getstr[50];
-    get.getstr = getstr;
-    get.getstrlength = 50;
+    char getstr[DAFACS_STRLENGTH];
+
+    Bfpcomcreatedafacsget_one(&get, getstr);
 
     LDafacsget(&set, &get);
 
     puts(getstr);
 
-
-    //-------------Utl test-----------------
-    uint32_t a = 10; // 1010
-    uint32_t res;
-    res = LUtlbit32getLSB(a);
-    LUtilbitprint(res);
-
-    res = LUtlbit32popcount(a);
-    printf("%d\n", res);
-
-    uint32_t b = 5; // 0101
-    LUtlbit32swap(&a, &b);
-    printf("a=%d b=%d\n", a, b );
-
-    return 0;
 }
 
 static void print_info(void)
 {
-    puts("system infomation...");
-    puts("etc...");
+    puts("args: -k: key -v value");
+    puts("-k key -v value");
 }
 

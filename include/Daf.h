@@ -1,6 +1,11 @@
 #pragma once
 #include "COMMON.h"
 
+enum 
+{
+    DAFACS_STRLENGTH = 100,
+};
+
 typedef char dafacsmidkeys[50][50];
 
 typedef struct dafacsset_s
