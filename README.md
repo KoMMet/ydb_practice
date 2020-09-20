@@ -22,6 +22,14 @@ Distributor ID: Ubuntu
 Description:    Ubuntu 18.04.5 LTS
 Release:        18.04
 Codename:       bionic
+ubuntu@ubuntu:~/workspace/c/tmp$ gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc-8
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper
+Target: aarch64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 8.4.0-1ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --disable-libphobos --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
+Thread model: posix
+gcc version 8.4.0 (Ubuntu/Linaro 8.4.0-1ubuntu1~18.04)
 ubuntu@ubuntu:~/workspace/c/tmp$
 ```
 
