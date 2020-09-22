@@ -3,15 +3,21 @@
 bfpflg=0
 utlflg=0
 udvflg=0
-separator=""
+dafflg=0
 
-while getopts "aftd" option
+trap ' 
+    echo "input ctrl+c"
+    exit
+' INT
+
+while getopts "aftdD" option
 do
     case $option in
         a)
             bfpflg=1
             utlflg=1
             udvflg=1
+            dafflg=1
             ;;
         f)
             bfpflg=1
@@ -21,6 +27,9 @@ do
             ;;
         d)
             udvflg=1
+            ;;
+        D)
+            dafflg=1
             ;;
         \?)
             echo "invalid argment"
@@ -55,3 +64,10 @@ if [ $udvflg -eq 1 ]; then
     cd -
 fi
 
+if [ $dafflg -eq 1 ]; then
+    cd Daf
+    make clean
+    make
+    make lib
+    cd -
+fi
