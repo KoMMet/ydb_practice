@@ -7,7 +7,8 @@
 
 static void print_info(void);
 
-int32_t main(int argc, char** argv)
+int32_t 
+main(int argc, char** argv)
 {
     int32_t initarg;
     char* optstr = "hk:v:";
