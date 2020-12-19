@@ -41,33 +41,38 @@ done
 shift $(expr $OPTIND - 1)
 
 if [ $bfpflg -eq 1 ]; then
-    cd Bfp
-    make clean
-    make
-    make exec
-    cd -
+    (
+        cd Bfp
+        make clean
+        make
+        make execclean
+        make exec
+    )
 fi
 
 if [ $utlflg -eq 1 ]; then
-    cd Utl
-    make clean
-    make
-    make lib
-    cd -
+    (
+        cd Utl
+        make clean
+        make
+        make lib
+    )
 fi
 
 if [ $udvflg -eq 1 ]; then
-    cd Udv
-    make clean
-    make
-    make lib
-    cd -
+    (
+        cd Udv
+        make clean
+        make
+        make lib
+    )
 fi
 
 if [ $dafflg -eq 1 ]; then
+    (
     cd Daf
     make clean
     make
     make lib
-    cd -
+    )
 fi

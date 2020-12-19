@@ -2,7 +2,7 @@
 #include "Udv.h"
 
 
-void Ludvmanprint(void)
+void LUdvmanprint(void)
 {
     puts("Udvmanprint");
     puts("software versoin etc...");

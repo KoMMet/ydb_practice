@@ -10,4 +10,13 @@
 #include <sys/types.h>
 #include <time.h>
 #include <error.h>
-
+#include <assert.h>
+#include <wchar.h>
+#include <signal.h>
+#include <pwd.h>
+#include <getopt.h>
+#include <setjmp.h>
+#include <ctype.h>
+#include <syslog.h>
+#include <ncurses.h>
+#include <locale.h>

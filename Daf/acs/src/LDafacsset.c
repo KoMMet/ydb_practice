@@ -2,10 +2,14 @@
 #include "libyottadb.h"
 
 
-
+/*
+ * 機能:データベースに値を設定する
+ * 引数:データ設定構造体P
+ * 戻り値:データ設定処理結果 
+ */
 int32_t LDafacsset(dafacsset_s* datap)
 {
-    ydb_buffer_t keyname, midkeys[50], setvalue;
+    ydb_buffer_t keyname, midkeys[DAFACS_STRLENGTH], setvalue;
     int32_t result;
 
     memset(&keyname, 0, sizeof(keyname));
@@ -26,9 +30,11 @@ int32_t LDafacsset(dafacsset_s* datap)
 
     result = ydb_set_s(&keyname, datap->midkeysnum, midkeys, &setvalue);
 
-    if(result != 0)
+    //データ設定の結果を判定する
+    if(result != YDB_OK)
     {
-        char str[50];
+        //YDBののエラーコードに沿ってエラーを表示する
+        char str[DAFACS_MIDOPACITY];
         ydb_buffer_t buf;
         buf.buf_addr = str;
         ydb_message(result, &buf);

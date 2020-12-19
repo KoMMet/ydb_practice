@@ -50,12 +50,13 @@ main(int argc, char** argv)
     Bfpalmdrive();
     Bfpcommod();
 
-    Ludvmanprint();
+    LUdvmaprint();
 
 
     //-----------db access set---------------
     dafacsset_s set;
 
+    //キーが一つのデータ設定
     Bfpcomcreatedafacsset_one(&set, keyname, setval);
 
     LDafacsset(&set);
@@ -64,14 +65,21 @@ main(int argc, char** argv)
     dafacsget_s get;
     char getstr[DAFACS_STRLENGTH];
 
+    //キーが一つのデータ取得
     Bfpcomcreatedafacsget_one(&get, getstr);
 
     LDafacsget(&set, &get);
 
+    puts(keyname);
     puts(getstr);
 
 }
 
+/*
+ * 機能:起動時のヘルプメッセージを表示する 
+ * 引数:なし
+ * 戻り値:なし
+ */
 static void print_info(void)
 {
     puts("args: -k: key -v value");
